@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To My Gee</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .page {
+      display: none;
+      padding: 40px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .active {
+      display: flex;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.3em;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin: 10px 0;
+      color: #555;
+      max-width: 500px;
+    }
+
+    .heart {
+      font-size: 3em;
+      margin: 20px 0;
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    button {
+      font-size: 1.2em;
+      padding: 10px 30px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #e91e63;
+      color: white;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background-color: #d81b60;
+    }
+
+    iframe {
+      margin-top: 30px;
+      border-radius: 12px;
+    }
+
+    .image-final {
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ หน้า 1: เกริ่น -->
+  <div id="page1" class="page active">
+  <h1>For You...</h1>
+  <img src="you.jpg" alt="ลองสแกนสิ" />
+  <p>Scan สิ</p>
+  <p>  </p>
+  <p>I will love you today, tomorrow, and forever.</p>
+  <p>There will never be a moment when you are unlovely by me.</p>
+  <p>You are my hearth, my safe place, and my everything.</p>
+  <p>No matter what life brings, my love for you will only grow stronger.</p>
+  <p>😊😊😊</p>
+    <button onclick="goToPage(2)">♡คลิกไปหน้าต่อไปเร็วๆๆๆๆ♡ ➜</button>
+  </div>
+
+  <!-- ✅ หน้า 2: ขอเป็นแฟน -->
+  <div id="page2" class="page">
+  <h1>อยากให้รู้ไว้ว่าเธอสำคัญกับเรามากๆนะ</h1>
+  <div class="heart">❤️</div>
+  <p>♡♡เป็นแฟนกันนะงับ เราจะดูแลเธอให้ดีที่สุดเลยยย♡♡</p>
+    <p>ตอบได้แค่ Yes หรือ Yes เท่านั้นนะ!</p>
+    <div>
+      <button onclick="goToPage(3)">Yes</button>
+      <button onclick="goToPage(3)">Yes</button>
+    </div>
+
+    <iframe style="border: none;" 
+      src="https://open.spotify.com/embed/track/6MctLjIJf7y1vaiZJ81ggl?utm_source=generator"
+      width="300" height="80" frameborder="0" 
+      allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- ✅ หน้า 3: รูปและข้อความ -->
+  <div id="page3" class="page">
+    <h1>ขอบคุณที่เข้ามาเป็นเรื่องราวดีๆนะ 💖</h1>
+    <img class="image-final" "lv.jpg" alt="ภาพของเรา" />
+    <p>ตั้งแต่วันนี้ไป ขอให้เราได้อยู่ด้วยกันแบบนี้ไปนานๆนะงับบ</p>
+    <p>รักเธอที่สุดเยยยย</p>
+  </div>
+
+  <script>
+    function goToPage(pageNumber) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach((page, index) => {
+        if (index === pageNumber - 1) {
+          page.classList.add('active');
+        } else {
+          page.classList.remove('active');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
