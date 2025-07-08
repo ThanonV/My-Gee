@@ -35,6 +35,27 @@
       100% { transform: scale(1); opacity: 1; }
     }
 
+    .button-group {
+      margin-top: 30px;
+    }
+
+    button {
+      font-size: 1.2em;
+      padding: 10px 30px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #e91e63;
+      color: white;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background-color: #d81b60;
+    }
+
     iframe {
       margin-top: 40px;
       border-radius: 12px;
@@ -43,7 +64,7 @@
 </head>
 <body>
   <iframe style="border: none;" 
-          src="https://open.spotify.com/track/1AEF2WaDl4sG5CpHh1jKEI?utm_source=generator" 
+          src="https://open.spotify.com/embed/track/1AEF2WaDl4sG5CpHh1jKEI?utm_source=generator"
           width="300" height="80" frameborder="0" 
           allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
           loading="lazy">
